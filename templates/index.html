@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Promotion Predictor</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/home-style.css">
+</head>
+<body background="/static/images/home-bg.jpg">
+    <h1> Promotion Predictor </h1>
+    <div class="form">
+        <form action="{{url_for('predict')}}" method="post" id="input_form">
+            <h3>Please enter the details: </h3>
+            <br>
+            <label id="edu-label" for="education">Education:</label>
+            <select id="education" name="education" required>
+                <option value="" disabled selected hidden>Select your qualification</option>
+                <option value="2">Master's and above</option>
+                <option value="0">Bachelor's degree</option>
+                <option value="1">Below Secondary</option>
+            </select>
+            <br>
+            <label id="gender-label" for="gender">Gender:</label>
+            <select id="gender" name='gender' required>
+                <option value="" disabled selected hidden>Select your gender</option>
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select>
+            <br>
+            <label id="recrute-label" for="recruitment_channel">Recruitment Channel:</label>
+            <select id="recruitment_channel" name="recruitment_channel" required>
+                <option value="" disabled selected hidden>Select your recruitment channel</option>
+                <option value="2">Sourcing</option>
+                <option value="1">Referred</option>
+                <option value="0">Other</option>
+            </select>
+            <br>
+            <label id="no-train-label" for="no_of_trainings">Number of trainings:</label>
+            <input type="number" min="1" max="10" value="1" step="1" name="no_of_trainings" placeholder="Enter number of trainings undergone" required>
+            <br>
+            <label id="age-label" for="age">Age:</label>
+            <input id="'age" type="number" min="20" max="60" value="0" step="1" name="age" placeholder="Enter your age" required>
+            <br>
+            <label id="pre-yr-label" for="previous_year_rating">Previous year rating:</label>
+            <select id="previous_year_rating" name="previous_year_rating" required>
+                <option value="" disabled selected hidden>Your previous year rating</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <label id="service-label" for="length_of_service">Service length:</label>
+            <input type="number" min="1" max="37" value="1" step="1" name="length_of_service" placeholder="Service length in years" required>
+            <br>
+            <label id="score-label" for="avg_training_score">Your average training score:</label>
+            <input type="number" min="39" max="99" value="0" step="1" name="avg_training_score" placeholder="Your average training score" required>
+            <br>
+            <label id="award-label" for="awards_won">Do you won any awards during the previous year:</label>
+            <select id="awards_won" name="awards_won" required>
+                <option value="" disabled selected hidden>Yes/No</option>
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+        
+    </div>
+</body>
+</html>
